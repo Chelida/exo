@@ -1,0 +1,234 @@
+
+	/*Header*/
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+nav{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 8vh;
+	background-color: #5D4954;
+
+}
+
+.logo{
+	color: rgb(226,226,226);
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-size: 20px;
+}
+
+.nav-links{
+	display: flex;
+	justify-content: space-around;
+	width: 30%;
+}
+.nav-links li{
+	list-style: none;
+}
+
+.nav-links a{
+	color: rgb(226,226,226);
+	text-decoration: none;
+	letter-spacing: 3px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.burger{
+	display: none; 
+	cursor: pointer;
+}
+
+.burger div{
+	width: 25px;
+	height: 3px;
+	background-color: white;
+	margin: 5px;
+	transition: all 0.5s ease;
+}
+@media screen and(max-width:1024px){
+
+	.nav-links{
+		width: 60%;	
+		}
+
+}
+
+@media screen and (max-width:768px){
+	body{
+		overflow-x: hidden;
+	}
+	.nav-links{
+		position: absolute;
+		right: 0px;
+		height: 92vh;
+		top: 8vh;
+		background-color:#5D4954;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 50%;
+		transform: translateX(100%);
+		transition: transform 0.5s ease-in;
+	}
+	.nav-links li{
+		opacity: 0;
+	}
+	.burger{
+		display: block;
+	}
+	.avatar{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	margin-left: 8%;
+	margin-top: -5%;
+	border-radius: 100%;
+}
+}
+
+.nav-active{
+	transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+	from{
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	to{
+		opacity: 1;
+		transform: translateX(0px);
+	} 
+}
+
+.toggle .line1{
+	transform: rotate(-45deg )translate(-5px,6px);
+}
+
+.toggle .line2{
+	opacity: 0;
+}
+.toggle .line3{
+	transform: rotate(45deg) translate(-5px,-6px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body{
+	margin: 0;
+	padding: 0;
+	background: url(../image/woman.jpg);
+	background-size: cover;
+	background-position: center; 
+	font-family: sans-serif;
+}
+.loginbox{
+	width: 320px;
+	min-height: 400px;
+	background: rgba(0,0,0,0.8);
+	color: #fff;
+	margin: 5%;
+	box-sizing: border-box;
+	padding: 70px 30px;
+	border-radius: 30px;
+
+}
+.avatar{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	position: absolute;
+	top: 80px;
+	left: 14%;
+	border-radius: 100%;
+}
+
+h1{
+	margin: 0;
+	padding: 0 0 20px;
+	text-align: center;
+	font-size: 22px;
+
+}
+.loginbox p{
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+.loginbox input{
+	width: 100%;
+	margin-bottom: 20px
+}
+.loginbox input[type="text"], input[type=password],input[type=email]{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	height: 40px;
+	color: #fff;
+	font-size: 16px
+}
+
+.loginbox input[type="submit"]{
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #fb2525;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
+}
+
+.loginbox input[type="submit"]{
+	cursor: pointer;
+	background: #ffc107;
+	color: #000;
+}
+
+.loginbox a{
+	text-decoration: none;
+	font-size: 12px;
+	line-height: 20px;
+	color:darkgrey; 
+}
+
+.loginbox a:hover{
+	color: #ffc107;
+}
